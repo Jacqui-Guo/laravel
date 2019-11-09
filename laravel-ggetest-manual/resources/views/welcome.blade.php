@@ -45,7 +45,7 @@
 </head>
 <body>
 <h1>极验验证SDKDemo</h1>
-<form class="popup" action="{{ route('login') }}" method="get">
+<form class="popup" action="{{ route('login') }}" method="POST">
     <h2>嵌入式Demo，使用表单形式提交二次验证所需的验证结果值</h2><br>
     <p>
         <label for="username2">用户名：</label>
@@ -60,7 +60,7 @@
     <div id="embed-captcha"></div>
     <p id="wait" class="show">正在加载验证码......</p>
     <p id="notice" class="hide">请先完成验证</p>
-
+    <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>" />   
     <input class="btn" id="embed-submit" type="submit" value="提交">
 </form>
 <script src="//cdn.bootcss.com/jquery/2.1.0/jquery.min.js"></script>

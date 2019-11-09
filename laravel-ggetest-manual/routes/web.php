@@ -16,4 +16,4 @@ Route::get('/', function () {
 });
 Route::get('/getVerify', 'GeetestController@getVerify')->name('getVerify');
 
-Route::get('/login', 'GeetestController@login')->name('login');
+Route::any('/login', 'GeetestController@login')->name('login');
